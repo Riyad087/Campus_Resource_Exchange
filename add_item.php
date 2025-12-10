@@ -32,16 +32,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $price = 0;
         }
 
-        // default: no image
+        
         $image_path = "";
 
-        // image upload thakle
+    
         if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
             $fileTmp  = $_FILES['image']['tmp_name'];
             $fileName = $_FILES['image']['name'];
             $fileType = $_FILES['image']['type'];
 
-            // simple allowed types
+            
             $allowedTypes = [
                 'image/jpeg' => 'jpg',
                 'image/png'  => 'png',
@@ -147,3 +147,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php
 include 'footer.php';
 ?>
+
